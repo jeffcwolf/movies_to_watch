@@ -1,8 +1,17 @@
 <h1>Actor Details</h1>
 
-<ul>
-<li><%= @actor.name %></li>
-<li><%= @actor.dob %></li>
-<li><%= @actor.bio %></li>
-<li><img src="<%= @actor.image_url %>"</li>
-</ul>
+<dl>
+  <dt>Name</dt>
+  <dd><%= @actor.name %></dd>
+
+  <dt>Date of Birth</dt>
+  <dd><%= @actor.dob %></dd>
+
+  <dt>Biography</dt>
+  <dd><%= @actor.bio %><dd>
+
+  <dt>Picture</dt>
+  <dd><img src="<%= @actor.image_url %>"</dd>
+</dl>
+
+<a href="http://localhost:3000/delete_actor/<%= @actor.id %>">Delete this Actor</a>

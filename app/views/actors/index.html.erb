@@ -1,7 +1,9 @@
 <h1>List of Actors (<%= @actors.count %>)</h1>
 
+<a href="http://localhost:3000/actors/new">Add a new Actor</a>
+
 <ul>
 <% @actors.each do |actor| %>
-  <li><%= actor.name %> (<%= actor.dob %>)</li>
+  <li><a href="http://localhost:3000/actors/<%= actor.id %>"><%= actor.name %> (<%= actor.dob %>)</a> | <a href="http://localhost:3000/delete_actor/<%= actor.id %>">Delete</a> | <a href="http://localhost:3000/edit_form/<%= actor.id %>">Edit</a></li>
 <% end %>
 </ul>
