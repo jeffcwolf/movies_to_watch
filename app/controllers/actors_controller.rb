@@ -1,0 +1,7 @@
+class ActorsController < ApplicationController
+
+
+
+
+
+end
