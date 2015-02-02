@@ -27,6 +27,10 @@ Rails.application.routes.draw do
   get("/actors",                  { :controller => "actors", :action => "index" })
   get("/actors/:id",              { :controller => "actors", :action => "show" })
 
+  # UPDATE
+  get("/actors/:id/edit",         { :controller => "actors", :action => "edit_form" })
+  get("/update_actor/:id",        { :controller => "actors", :action => "update_row" })
+
   # DELETE
   get("/delete_actor/:id",        { :controller => "actors", :action => "destroy" })
   #------------------------------

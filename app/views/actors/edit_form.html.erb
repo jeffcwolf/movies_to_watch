@@ -1,0 +1,43 @@
+<h1>Edit Record for <%= @actor.name %></h1>
+
+<!-- This form gets sent to the following URL, which is linked, via routes.rb, to the
+'update row' action in actors_controller.rb. This, in turn, updates a row
+in the Actors table and modifies the values from the input name fields below, both to the
+Table and to the query string in the URL for 'update_actor'. It then renders 'update_row.html.erb'
+because that is the default value for the 'update row' method, if not specified.
+
+Besides the smaller modifications, the only other major change between this edit form and the
+new form is the inclusion of default values from the existing database table. These go in the
+'value' input field.
+-->
+
+<form action="http://localhost:3000/update_actor/<%= @actor.id %>">
+
+<div>
+    <label for="name">Name</label>
+    <input name="the_name" type="text" id="name" value="<%= @actor.name %>" placeholder="Enter name here">
+  </div>
+
+  <div>
+    <label for="dob">DOB</label>
+    <input name="the_dob" type="text" id="dob" value="<%= @actor.dob %>" placeholder="Month Day, Year">
+  </div>
+
+<!-- Note the different format for the textarea block below (especially for the value) -->
+  <div>
+    <label for="bio">Biography</label>
+    <textarea
+      name="the_bio" type="text" id="bio" placeholder="Enter bio in this box" rows="10"><%= @actor.bio %>
+    </textarea>
+  </div>
+
+  <div>
+    <label for="image_url">Picture URL</label>
+    <input name="the_image_url" type="text" id="image_url" value="<%= @actor.image_url %>" placeholder="Enter image url here">
+  </div>
+
+  <div>
+    <input type="Submit" value="Update Actor"> or <a href="/actors">Cancel</a>
+  </div>
+
+</form>

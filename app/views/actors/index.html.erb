@@ -4,6 +4,6 @@
 
 <ul>
 <% @actors.each do |actor| %>
-  <li><a href="http://localhost:3000/actors/<%= actor.id %>"><%= actor.name %> (<%= actor.dob %>)</a> | <a href="http://localhost:3000/delete_actor/<%= actor.id %>">Delete</a> | <a href="http://localhost:3000/edit_form/<%= actor.id %>">Edit</a></li>
+  <li><a href="http://localhost:3000/actors/<%= actor.id %>"><%= actor.name %> (<%= actor.dob %>)</a> | <a href="http://localhost:3000/delete_actor/<%= actor.id %>">Delete</a> | <a href="http://localhost:3000/actors/<%= actor.id %>/edit">Edit</a></li>
 <% end %>
 </ul>
