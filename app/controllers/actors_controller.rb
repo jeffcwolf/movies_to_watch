@@ -1,5 +1,23 @@
 class ActorsController < ApplicationController
 
+  def new_form
+
+  end
+
+  def create_row
+
+    @actor = Actor.new
+
+    @actor.name = params["the_name"] #These come from the input 'name' field in the new form
+    @actor.dob = params["the_dob"] #These come from the input 'name' field in the new form
+    @actor.bio = params["the_bio"] #These come from the input 'name' field in the new form
+    @actor.image_url = params["the_image_url"] #These come from the input 'name' field in the new form
+
+    @actor.save
+
+  end
+
+
   def index
 
     @actors = Actor.all
@@ -18,7 +36,6 @@ class ActorsController < ApplicationController
     @actor.destroy
 
   end
-
 
 
 end
