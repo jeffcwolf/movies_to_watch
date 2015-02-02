@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+
   def edit_form
     @movie = Movie.find_by({ :id => params["id"] })
   end

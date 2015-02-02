@@ -1,0 +1,7 @@
+<h1>List of Actors (<%= @actors.count %>)</h1>
+
+<ul>
+<% @actors.each do |actor| %>
+  <li><%= actor.name %> (<%= actor.dob %>)</li>
+<% end %>
+</ul>
